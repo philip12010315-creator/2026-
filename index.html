@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>樂程坊 寒假 LEGO AI STEAM 營隊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        html {
+            scroll-behavior: smooth; /* 啟用平滑捲動 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            padding-top: 64px; /* 為固定導航欄預留空間 */
+        }
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #f97316; /* Orange accent */
+            border-radius: 9999px;
+        }
+        .card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        /* 調整背景色，增加深度和科技感 */
+        .snow-pattern {
+            background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%);
+            border: 3px solid #6366f1; /* 邊框增加科技感 */
+        }
+
+        /* 關鍵：科幻字幕效果 */
+        .scifi-title {
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 0 0 5px #6366f1, 0 0 10px #6366f1, 0 0 20px #a5b4fc; /* 藍色發光效果 */
+            animation: flicker 1.5s infinite alternate; /* 輕微閃爍動畫 */
+        }
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow: 0 0 5px #6366f1, 0 0 10px #6366f1, 0 0 20px #a5b4fc;
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                text-shadow: none;
+                opacity: 0.8;
+            }
+        }
+        /* 調整副標題顏色 */
+        .scifi-subtitle {
+            text-shadow: 0 0 3px #fde047;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 固定導航列 (Fixed Navigation Bar) -->
+    <nav class="navbar-fixed bg-white shadow-md border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-lg font-bold text-indigo-600 tracking-wider">
+                樂程坊 <span class="text-sm font-normal text-gray-500">寒假營隊</span>
+            </a>
+            <!-- Desktop Navigation Links -->
+            <div class="space-x-6 hidden md:flex font-medium">
+                <a href="#features" class="text-gray-600 hover:text-indigo-600 transition duration-150">課程特色</a>
+                <a href="#schedule" class="text-gray-600 hover:text-indigo-600 transition duration-150">梯次資訊</a>
+                <a href="#location" class="text-gray-600 hover:text-indigo-600 transition duration-150">地點班制</a>
+                <a href="#pricing" class="text-gray-600 hover:text-indigo-600 transition duration-150">優惠方案</a>
+            </div>
+            <!-- Mobile CTA Button -->
+            <!-- 導航列上的 CTA 使用外部報名連結 -->
+            <a href="https://forms.gle/koiKM3S7H5WQ2ZAM6" target="_blank" class="md:hidden bg-indigo-500 text-white px-3 py-1 text-sm rounded-lg hover:bg-indigo-600 transition">
+                立即報名
+            </a>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto p-4 md:p-8">
+
+        <!-- Header and Main Title Section (Hero Section) - 應用科幻感樣式 -->
+        <header class="snow-pattern text-white rounded-3xl p-8 md:p-12 mb-10 text-center relative overflow-hidden card">
+            <!-- Snowflakes/Sparkle effect (simulated) -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 8px 8px;"></div>
+
+            <!-- 主標題應用科幻字幕樣式 -->
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3 tracking-tight relative z-10 scifi-title">
+                樂程坊 ❄️ 寒假科技營隊
+            </h1>
+            <!-- 副標題應用科幻字幕樣式 -->
+            <p class="text-xl md:text-2xl font-light italic relative z-10 text-yellow-300 scifi-subtitle">
+                LEGO積木 × AI × STEAM 啟發創造力的最佳時刻
+            </p>
+            <div class="mt-4 flex justify-center items-center space-x-4 relative z-10">
+                <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">動手實作</span>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">協作解難</span>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">科技應用</span>
+            </div>
+
+            <!-- 主CTA按鈕 - 使用外部報名連結 -->
+            <a href="https://forms.gle/koiKM3S7H5WQ2ZAM6" target="_blank" class="mt-8 inline-block bg-yellow-400 text-gray-900 font-extrabold text-lg px-8 py-3 rounded-full shadow-xl hover:bg-yellow-300 transition transform hover:scale-105 relative z-10 ring-4 ring-yellow-200/50">
+                🚀 立即報名，抓住早鳥優惠！
+            </a>
+        </header>
+
+        <!-- Course Features Section -->
+        <section id="features" class="mb-10 p-6 bg-white rounded-xl card">
+            <h2 class="section-title text-2xl font-bold text-gray-800 mb-6">🎯 課程特色與精神</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <i data-lucide="hand" class="w-8 h-8 mx-auto text-blue-600 mb-2"></i>
+                    <p class="font-semibold text-lg text-blue-800">動手實作</p>
+                    <p class="text-gray-600 text-sm">創意思考 × 科技應用</p>
+                </div>
+                <div class="p-4 bg-yellow-50 rounded-lg">
+                    <i data-lucide="sparkles" class="w-8 h-8 mx-auto text-yellow-600 mb-2"></i>
+                    <p class="font-semibold text-lg text-yellow-800">專業引導</p>
+                    <p class="text-gray-600 text-sm">講師全程引導，兼顧趣味與深度</p>
+                </div>
+                <div class="p-4 bg-green-50 rounded-lg">
+                    <i data-lucide="users" class="w-8 h-8 mx-auto text-green-600 mb-2"></i>
+                    <p class="font-semibold text-lg text-green-800">小班教學</p>
+                    <p class="text-gray-600 text-sm">注重個別表現與互動學習</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule/Themes Section -->
+        <section id="schedule" class="mb-10">
+            <h2 class="section-title text-2xl font-bold text-gray-800 mb-6 p-2">🗓️ 開課梯次 (三天三夜精彩探索)</h2>
+            <div class="space-y-4">
+
+                <!-- Ladder 1 -->
+                <div class="bg-white p-5 rounded-xl border-l-4 border-orange-500 card">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold text-orange-600">📍 第一梯次：時空探險隊</h3>
+                        <span class="text-sm font-semibold text-orange-500 bg-orange-100 px-3 py-1 rounded-full">探索歷史與未來</span>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-lg">1/26 ~ 1/30 (五天)</p>
+                </div>
+
+                <!-- Ladder 2 -->
+                <div class="bg-white p-5 rounded-xl border-l-4 border-blue-500 card">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold text-blue-600">📍 第二梯次：藝術機械師</h3>
+                        <span class="text-sm font-semibold text-blue-500 bg-blue-100 px-3 py-1 rounded-full">結合美學與動力</span>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-lg">2/2 ~ 2/6 (五天)</p>
+                </div>
+
+                <!-- Ladder 3 -->
+                <div class="bg-white p-5 rounded-xl border-l-4 border-purple-500 card">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold text-purple-600">📍 第三梯次：新春發明家</h3>
+                        <span class="text-sm font-semibold text-purple-500 bg-purple-100 px-3 py-1 rounded-full">設計新年互動裝置</span>
+                    </div>
+                    <p class="text-gray-600 mt-2 text-lg">2/9 ~ 2/13 (五天)</p>
+                </div>
+
+                <p class="text-center text-sm text-gray-500 pt-2">滿班不超收，建議提早報名！</p>
+            </div>
+        </section>
+
+        <!-- Location & Class Info Section -->
+        <section id="location" class="mb-10 p-6 bg-white rounded-xl card">
+            <h2 class="section-title text-2xl font-bold text-gray-800 mb-6">🏫 開課地點與班級制度</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- 站前教室 -->
+                <div class="bg-red-50 p-4 rounded-lg border-b-2 border-red-400">
+                    <h4 class="font-bold text-red-600 flex items-center mb-1">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> 站前教室
+                    </h4>
+                    <p class="text-sm text-gray-700">享「早鳥優惠」，小班制。</p>
+                    <p class="text-xs text-red-500 font-medium">名額有限，滿班即不招生！</p>
+                </div>
+                <!-- 南京復興共享教室 -->
+                <div class="bg-teal-50 p-4 rounded-lg border-b-2 border-teal-400">
+                    <h4 class="font-bold text-teal-600 flex items-center mb-1">
+                        <i data-lucide="building-2" class="w-4 h-4 mr-1"></i> 南京復興共享教室
+                    </h4>
+                    <p class="text-sm text-gray-700">小班制：6人開班，15人滿班</p>
+                    <p class="text-xs text-teal-500 font-medium">不超收，完善學習照顧。</p>
+                </div>
+                <!-- 自主班 -->
+                <div class="bg-gray-50 p-4 rounded-lg border-b-2 border-gray-400">
+                    <h4 class="font-bold text-gray-600 flex items-center mb-1">
+                        <i data-lucide="smile" class="w-4 h-4 mr-1"></i> 自主班 (客製化)
+                    </h4>
+                    <p class="text-sm text-gray-700">地點、人數自訂，專業師資進駐。</p>
+                    <p class="text-xs text-gray-500 font-medium">享受專屬客製化課程。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing and Discount Section -->
+        <section id="pricing" class="mb-10">
+            <h2 class="section-title text-2xl font-bold text-gray-800 mb-6 p-2">💰 報名費用與超值優惠</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                <!-- Main Price Card -->
+                <div class="lg:col-span-1 bg-white p-6 rounded-xl border-4 border-indigo-500 shadow-2xl text-center card">
+                    <p class="text-indigo-600 text-xl font-semibold mb-3">五日全梯次費用</p>
+                    <p class="text-5xl font-extrabold text-gray-900 mb-4">
+                        <span class="text-3xl align-top">NT$</span> 9000
+                    </p>
+                    <ul class="text-sm text-gray-600 list-disc list-inside text-left mx-auto max-w-[200px] space-y-1">
+                        <li>包含課程費用</li>
+                        <li>包含教材設備</li>
+                        <li>包含五天午餐</li>
+                    </ul>
+                    <!-- CTA Button inside pricing - 使用外部報名連結，並更改文字 -->
+                    <a href="https://forms.gle/koiKM3S7H5WQ2ZAM6" target="_blank" class="mt-4 inline-block w-full bg-indigo-500 text-white font-bold py-2 rounded-lg hover:bg-indigo-600 transition shadow-md">
+                        前往報名連結
+                    </a>
+                </div>
+
+                <!-- Discount List -->
+                <div class="lg:col-span-2 bg-yellow-50 p-6 rounded-xl border-4 border-yellow-300 card">
+                    <h3 class="text-2xl font-bold text-yellow-800 mb-4 flex items-center">
+                        <i data-lucide="gift" class="w-6 h-6 mr-2"></i> 🎁 優惠方案 (最高可折 1500元！)
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-yellow-100 rounded-lg">
+                            <span class="font-semibold text-lg text-yellow-700">🔥 早鳥優惠 (12/31 前)</span>
+                            <span class="text-xl font-extrabold text-red-600">- 500 元</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-yellow-100 rounded-lg">
+                            <span class="font-semibold text-lg text-yellow-700">🔥 舊生再報名</span>
+                            <span class="text-xl font-extrabold text-red-600">- 500 元</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-yellow-100 rounded-lg">
+                            <span class="font-semibold text-lg text-yellow-700">🔥 團報 (或一位多報兩梯次)</span>
+                            <span class="text-xl font-extrabold text-red-600">- 500 元</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-yellow-100 rounded-lg">
+                            <span class="font-semibold text-lg text-yellow-700">🔥 分享貼文 @ 朋友</span>
+                            <span class="text-xl font-extrabold text-red-600">- 500 元</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flexible Pricing Section -->
+        <section class="mb-10 p-6 bg-white rounded-xl card">
+            <h2 class="section-title text-2xl font-bold text-gray-800 mb-6">📌 彈性報名費用</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="p-4 bg-gray-100 rounded-lg border-2 border-gray-200">
+                    <p class="text-xl font-bold text-gray-700">單日報名</p>
+                    <p class="text-3xl font-extrabold text-green-600 mt-1 mb-2">$2,000 <span class="text-xl font-normal">/ 天</span></p>
+                </div>
+                <div class="p-4 bg-gray-100 rounded-lg border-2 border-gray-200">
+                    <p class="text-xl font-bold text-gray-700">半日報名</p>
+                    <p class="text-3xl font-extrabold text-green-600 mt-1 mb-2">$1,000 <span class="text-xl font-normal">/ 半天</span></p>
+                </div>
+                <div class="p-4 bg-gray-100 rounded-lg border-2 border-gray-200">
+                    <p class="text-xl font-bold text-gray-700">餐費 (另計)</p>
+                    <p class="text-3xl font-extrabold text-red-600 mt-1 mb-2">$100 <span class="text-xl font-normal">/ 天</span></p>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-4 italic">※ 單日報名達 5天以上，可享整週優惠價計算唷！</p>
+        </section>
+
+
+        <!-- Footer / CTA -->
+        <footer class="text-center pt-6 pb-2 text-gray-600">
+            <i data-lucide="award" class="w-6 h-6 mx-auto mb-2 text-indigo-500"></i>
+            <p class="lg:text-lg font-medium text-indigo-700">開啟思考、協作與解難的能力！</p>
+            <p class="text-sm">樂程坊 寒假營隊，讓學習更有趣。</p>
+        </footer>
+
+    </div>
+
+    <!-- Script to initialize Lucide icons -->
+    <script>
+        // Replace all elements with the data-lucide attribute with the corresponding icon.
+        lucide.createIcons();
+    </script>
+</body>
+</html>
